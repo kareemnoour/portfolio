@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    border: 10px solid transparent;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+/* Start header */
+header{
+    position: fixed;
+    height: 50px;
+    z-index: 999;
+    background-color: black;
+    
+}
+header img{
+    width: 20px;
+}
+header ul{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header ul li{
+    transition: 0.3s;
+}
+header ul li:hover{
+    transform: translateY(-5px);
+    
+}
+header ul li:hover a {
+    color: var(--blue-alt-color);
+}
+/* End header */
+/* Start section */
+.overlay{
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 80%);
+}
+.container{
+    background-image: url(../images/background-1.jpg);
+    background-size:cover ;
+    background-attachment: fixed;
+    height: 100vh;
+}
+@media(max-width:767px){
+    .container{
+       margin: 20px;
+       opacity: 1; 
+       padding: 0 20px;
+       font-size: 13px;
+    }
+   
+}
+.container .main{
+    margin-top: 60px;
+} 
+.container .main .info h2{
+    font-weight: 800;
+    font-size: 40px;
+} 
+.container .main .info p{
+    margin: 20px 0;
+    line-height: 2;
+    font-size: 20px;
+} 
+.container .main .icons i {
+    cursor: pointer;
+    transition: 0.5s;
+} 
+.container .main .icons i:hover {
+    transform: scale(1.1);
+} 
+.container .main .icons .whats:hover {
+    color: var(--green-color);
+} 
+.container .main .icons .link:hover {
+    color: var(--blue-alt-color);
+} 
+.container .main .icons .face:hover {
+    color: var(--blue-color);
+} 
+.container .main .icons .twi:hover {
+    color: aqua;
+} 
+/* End section */
+/* Start About */
+#About .info{
+    background-color: #80808029;
+}
+#About .info p{
+    box-shadow: 0 5px 25px rgb(1 1 1 / 90%);
+    background-color: #80808029;
+    transition: 0.5s;
+}
+#About .info img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+#About .info p:hover ,#About .info img:hover{
+   transform: scale(1.1);
+}
+/* End About */
+/* Start About */
+#contact{
+    background-color:#80808029 ;
+}
+#contact .call{
+    background-color:#80808029 ;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 90%);
+}
+h2{
+    font-size: 40px;
+}
+#contact .call ul li{
+    transition: 0.5s;
+}
+#contact .call ul li:hover {
+    transform: translateY(-5px);
+}
+/* End About */
+.copyright i{
+    color: red;
+}
+
+@media (max-width:767px){
+    h2{
+        font-size: 28px;
+    }
+    #About .info{
+        flex-direction: column-reverse;
+    }
+    #About .info img{
+        width: 70px;
+        height: 70px;
+    }
+    #contact .call ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
